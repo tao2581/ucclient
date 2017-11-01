@@ -1,6 +1,8 @@
 ## UCClient for Laravel5
 
-本项目基于 [wehnhew/laravel4-ucenter](https://github.com/wehnhew/laravel4-ucenter) 做了一点儿微小的升级，感谢 wehnhew ！
+本项目基于 [MyController/ucclient](https://github.com/MyController/ucclient) 做了一点儿微小的升级，感谢 wehnhew ！
+
+## 增加注册账号时同步额外用户属性
 
 ### 安装
 
