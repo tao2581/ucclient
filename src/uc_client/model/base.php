@@ -82,7 +82,7 @@ class base
     {
         require_once UC_ROOT . 'lib/db.class.php';
         $this->db = new ucclient_db();
-        $this->db->connect(UC_DBHOST, UC_DBUSER, UC_DBPW, '', UC_DBCHARSET, UC_DBCONNECT, UC_DBTABLEPRE);
+        $this->db->connect(UC_DBHOST, UC_DBUSER, UC_DBPW, UC_DBNAME, UC_DBCHARSET, UC_DBCONNECT, UC_DBTABLEPRE);
     }
 
     function init_cache()
