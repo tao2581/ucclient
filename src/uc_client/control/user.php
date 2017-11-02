@@ -66,24 +66,24 @@ class usercontrol extends base
         return '';
     }
 
-    function onregister()
-    {
-        $this->init_input();
-        $username = $this->input('username');
-        $password = $this->input('password');
-        $email = $this->input('email');
-        $questionid = $this->input('questionid');
-        $answer = $this->input('answer');
-        $regip = $this->input('regip');
-
-        if (($status = $this->_check_username($username)) < 0) {
-            return $status;
-        }
-        if (($status = $this->_check_email($email)) < 0) {
-            return $status;
-        }
-        $uid = $_ENV['user']->add_user($username, $password, $email, 0, $questionid, $answer, $regip);
-        return $uid;
+    function onregister() {
+	$this->init_input();
+	$username = $this->input('username');
+	$password =  $this->input('password');
+	$email = $this->input('email');
+	$questionid = $this->input('questionid');
+	$answer = $this->input('answer');
+	$regip = $this->input('regip');
+$role = $this->input('role');
+$domain_user = $this->input('domain_user');
+	if(($status = $this->_check_username($username)) < 0) {
+		return $status;
+	}
+	if(($status = $this->_check_email($email)) < 0) {
+		return $status;
+	}
+	$uid = $_ENV['user']->add_user($username, $password, $email,$role, $domain_user,0, $questionid, $answer, $regip);
+	return $uid;
     }
 
     function _check_username($username)
