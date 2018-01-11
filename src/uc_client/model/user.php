@@ -141,7 +141,7 @@ class usermodel
         return $arr;
     }
 
-    function add_user($username, $password, $email,$role,$domain_user, $meta, $uid = 0, $questionid = '', $answer = '', $regip = '') {
+    function add_user($username, $password, $email,$role,$domain_user, $meta = '', $uid = 0, $questionid = '', $answer = '', $regip = '') {
 	$regip = empty($regip) ? $this->base->onlineip : $regip;
 	$salt = substr(uniqid(rand()), -6);
 	$password = md5(md5($password).$salt);
