@@ -3,6 +3,9 @@
 本项目基于 [MyController/ucclient](https://github.com/MyController/ucclient) 做了一点儿微小的升级，感谢 wehnhew ！
 
 ## 增加注册账号时同步额外用户属性
+- role 用户角色
+- domain_user 域用户名
+- meta json 格式自定义信息 如： {student_number: 1002} 学号
 
 ### 安装
 
