@@ -317,8 +317,8 @@ function uc_friend_ls($uid, $page = 1, $pagesize = 10, $totalnum = 10, $directio
     return UC_CONNECT == 'mysql' ? $return : uc_unserialize($return);
 }
 
-function uc_user_register($username, $password, $email, $role, $domain_user, $questionid = '', $answer = '', $regip = '') {
-	return call_user_func(UC_API_FUNC, 'user', 'register', array('username'=>$username, 'password'=>$password, 'email'=>$email, 'role'=>$role,'questionid'=>$questionid, 'answer'=>$answer, 'regip' => $regip,'domain_user'=>$domain_user));
+function uc_user_register($username, $password, $email, $role, $domain_user,$meta = '', $questionid = '', $answer = '', $regip = '') {
+	return call_user_func(UC_API_FUNC, 'user', 'register', array('username'=>$username, 'password'=>$password, 'email'=>$email, 'role'=>$role,'questionid'=>$questionid, 'answer'=>$answer, 'regip' => $regip,'domain_user'=>$domain_user,'meta'=>$meta));
 }
 
 function uc_user_login($username, $password, $isuid = 0, $checkques = 0, $questionid = '', $answer = '')
